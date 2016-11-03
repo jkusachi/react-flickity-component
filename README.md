@@ -9,37 +9,62 @@ A React.js Flickity component.
 ```shell
 npm install react-flickity-component --save
 ```
+#### Peer Dependencies:
+- Flickity
+- imagesLoaded
+
+#### Development:
+**Build** `npm run build`
+
+**Watch** `npm run dev`
+
+#### Assumptions:
+
+```
+import Flickity from 'flickity';
+import imagesloaded from 'imagesloaded';
+
+window.Flickity = Flickity;
+window.imagesloaded = imagesloaded;
+```
+
 
 #### Usage:
 
 ```javascript
-var React = require('react');
-var Flickity = require('react-flickity-component')(React);
+import React from 'react';
+import FlickityComponent from 'react-flickity-component';
 
 var flickityOptions = {
     initialIndex: 2
 }
 
-var Carousel = React.createClass({
-    render: function () {
-        return (
-            <Flickity
-                className={'carousel'} // default ''
-                elementType={'span'} // default 'div'
-                options={flickityOptions} // takes flickity options {}
-                disableImagesLoaded={false} // default false
-            >
+export default function TestComponent() {
+    return (
+        <FlickityComponent
+            className={'carousel'}
+            elementType={'span'}
+            options={flickityOptions}
+        >
+            <div className="items">
                 <img src="/images/placeholder.png"/>
+            </div>
+            <div className="items">
                 <img src="/images/placeholder.png"/>
+            </div>
+            <div className="items">
                 <img src="/images/placeholder.png"/>
-            </Flickity>
-        );
-    }
-});
-
-module.exports = Carousel;
+            </div>
+        </FlickityComponent>
+    );
+}
 
 ```
+
+#### Credits
+
+Forked from [theolampert/react-flickity-component](https://github.com/theolampert/react-flickity-component)
+
 
 #### License Information:
 Flickity may be used in commercial projects and applications with the one-time purchase of a commercial license.
