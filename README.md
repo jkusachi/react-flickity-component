@@ -18,7 +18,7 @@ npm install react-flickity-component --save
 
 **Watch** `npm run dev`
 
-#### Assumptions:
+#### Assumptions!!!:
 
 ```
 import Flickity from 'flickity';
@@ -27,6 +27,15 @@ import imagesloaded from 'imagesloaded';
 window.Flickity = Flickity;
 window.imagesloaded = imagesloaded;
 ```
+
+so please run
+`npm install --save flickity imagesloaded`
+
+#### Add the styles
+
+Add the CSS to your project, however you do it (SCSS, etc...)
+
+* [flickity.2.0.5.css](./lib/flickity.2.0.5.css)
 
 
 #### Usage:
