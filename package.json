@@ -35,5 +35,8 @@
     "flickity": "^2.0.10",
     "imagesloaded": "^4.1.0",
     "react": "^16.2.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0"
   }
 }
