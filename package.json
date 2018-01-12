@@ -1,6 +1,6 @@
 {
-  "name": "@realestate/react-flickity-component",
-  "version": "0.0.4",
+  "name": "@andreicek/react-flickity-component",
+  "version": "0.0.1",
   "description": "react flickity component",
   "main": "./lib/index.js",
   "scripts": {
@@ -29,14 +29,16 @@
     "expect": "^1.13.4",
     "jsdom": "9.4.1",
     "mocha": "^2.3.4",
-    "react-addons-test-utils": "15.0.1"
+    "react-addons-test-utils": "15.0.1",
+    "flickity": "^2.0.10",
+    "imagesloaded": "^4.1.0",
+    "react": "^16.2.0",
+    "prop-types": "^15.6.0"
   },
   "peerDependencies": {
     "flickity": "^2.0.10",
     "imagesloaded": "^4.1.0",
-    "react": "^16.2.0"
-  },
-  "dependencies": {
-    "prop-types": "^15.6.0"
+    "react": "^16.2.0",
+    "prop-types": "^15.6.0" 
   }
 }

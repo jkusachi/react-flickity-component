@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Flickity from 'flickity';
 
 const isBrowser = (typeof window !== 'undefined');
 
