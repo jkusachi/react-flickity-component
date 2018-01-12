@@ -1,5 +1,5 @@
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 const isBrowser = (typeof window !== 'undefined');
 
@@ -17,7 +17,7 @@ export default class FlickityComponent extends Component {
 
   componentDidMount() {
     const carousel = this.carousel;
-    const { options } = this.props;
+    const {options} = this.props;
 
     this.flkty = new Flickity(carousel, options)
     this.flkty.on('cellSelect', this.updateSelected)
@@ -43,7 +43,7 @@ export default class FlickityComponent extends Component {
   }
 
   updateSelected() {
-    const { onSwipe } = this.props;
+    const {onSwipe} = this.props;
     var index = this.flkty.selectedIndex
     this.setState({
       selectedIndex: index
@@ -52,7 +52,7 @@ export default class FlickityComponent extends Component {
   }
 
   render() {
-    const { children, className, elementType } = this.props;
+    const {children, className, elementType} = this.props;
 
     return React.createElement(elementType, {
       className,
@@ -62,12 +62,12 @@ export default class FlickityComponent extends Component {
 }
 
 FlickityComponent.propTypes = {
-  disableImagesLoaded: React.PropTypes.bool,
-  options: React.PropTypes.object,
-  className: React.PropTypes.string,
-  elementType: React.PropTypes.string,
-  children: React.PropTypes.array,
-  onSwipe: React.PropTypes.func
+  disableImagesLoaded: PropTypes.bool,
+  options: PropTypes.object,
+  className: PropTypes.string,
+  elementType: PropTypes.string,
+  children: PropTypes.array,
+  onSwipe: PropTypes.func
 };
 
 FlickityComponent.defaultProps = {
@@ -77,4 +77,3 @@ FlickityComponent.defaultProps = {
   className: '',
   elementType: 'div'
 };
-
