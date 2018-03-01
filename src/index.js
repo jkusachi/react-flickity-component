@@ -18,7 +18,7 @@ export default class FlickityComponent extends Component {
       deactivate,
     } = this.props;
 
-    if ((isBrowser || initOnServer)) {
+    if (isBrowser || initOnServer) {
       const Flickity = require('flickity');
       this.flkty = new Flickity(this.carousel, options);
       this.flkty.on('cellSelect', this.updateSelected);
