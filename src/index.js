@@ -33,7 +33,9 @@ export default class FlickityComponent extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.flkty.option(nextProps.options);
+    if (nextProps.options) {
+      this.flkty.option(nextProps.options);
+    }
   }
 
   imagesLoaded() {
