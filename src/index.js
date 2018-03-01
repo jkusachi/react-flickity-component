@@ -15,7 +15,6 @@ export default class FlickityComponent extends Component {
     const {
       options,
       initOnServer,
-      deactivate,
     } = this.props;
 
     if (isBrowser || initOnServer) {
