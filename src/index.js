@@ -32,6 +32,12 @@ export default class FlickityComponent extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.options) {
+      this.flkty.option(nextProps.options);
+    }
+  }
+
   imagesLoaded() {
     const { disableImagesLoaded } = this.props;
     if (disableImagesLoaded) return
