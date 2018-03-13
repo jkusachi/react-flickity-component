@@ -1,6 +1,6 @@
 {
-  "name": "@andreicek/react-flickity-component",
-  "version": "0.0.1",
+  "name": "@realestate/react-flickity-component",
+  "version": "0.0.4",
   "description": "react flickity component",
   "main": "./lib/index.js",
   "scripts": {
